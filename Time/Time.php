@@ -190,6 +190,11 @@ class Time extends \DateTime implements DayMonthYearInterface
         return $this->format('Ym') > date('Ym');
     }
 
+    public function isFutureMonthAlt2(string $date): bool
+    {
+        return $this->format('Ym') > $date;
+    }
+
     public function isMonthYear(MonthYearInterface $monthYear): bool
     {
         return

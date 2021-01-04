@@ -30,3 +30,13 @@ for($i=0; $i<$iterations; $i++){
 echo "time: ". (microtime(true) - $start_time). "\n";
 echo "memory (byte): ". memory_get_peak_usage(true). "\n";
 
+$start_time=microtime(true);
+echo "\ntesting isFutureMonthAlt2 with $iterations iterations:\n";
+$date = date('Ym');
+for($i=0; $i<$iterations; $i++){
+    $isFuture = $time->isFutureMonthAlt2($date);
+}
+
+echo "time: ". (microtime(true) - $start_time). "\n";
+echo "memory (byte): ". memory_get_peak_usage(true). "\n";
+
