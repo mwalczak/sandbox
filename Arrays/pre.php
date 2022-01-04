@@ -6,7 +6,7 @@ $array1 = [];
 $array2 = [];
 
 for ($i = 0; $i < $iterations; $i++) {
-    $array1[] = $i;
-    $array2[] = $iterations + $i;
+    $array1[$i] = $i;
+    $array2[$iterations + $i] = $iterations + $i;
 }
 echo "memory (byte): " . memory_get_peak_usage(true) . "\n\n";
